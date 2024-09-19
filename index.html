@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>O Monstro</title>
+</head>
+<body>
+    <main>
+        <div class="passo ativo" id="passo-0">
+            <img src="img/cenario-passo0.png" alt="">
+            <p>Seu nome é Clara, uma jovem doce que chegou agora na vila.</p>
+            <p>Nela havia uma casa abandonada que todos evitavam. Certa noite, uma jovem chamada Clara, curiosa sobre os rumores, decidiu explorar o lugar.</p>
+            <p>Você gostaria de explorar?</p>
+            <button class="btn-proximo" data-proximo="1">SIM</button>
+            <button class="btn-proximo" data-proximo="2">NÃO</button>
+        </div>
+        <div class="passo" id="passo-1">
+            <p>Você entra e ouve um barulho no fundo da casa, um barulho assustador.</p>
+            <button class="btn-proximo" data-proximo="3">Investigar barulho</button>
+            <button class="btn-proximo" data-proximo="4">Sair correndo</button>
+        </div>
+        <div class="passo" id="passo-2">
+            <p>Você decide não explorar a casa e retorna para a vila.</p>
+            <button class="btn-proximo" data-proximo="5">Explorar o mercado da vila</button>
+            <button class="btn-proximo" data-proximo="6">Ir para a floresta próxima</button>
+        </div>
+        <div class="passo" id="passo-3">
+            <p>Às traseiras da casa, você encontra o Bluezão comendo lixo.</p>
+            <button class="btn-proximo" data-proximo="7">Perguntar o que ele faz ali</button>
+            <button class="btn-proximo" data-proximo="8">Ignorar e continuar explorando</button>
+        </div>
+        <div class="passo" id="passo-4">
+            <img src="img/cenario-passo4-voltar-casa.png" alt="Imagem voltando para casa e desistindo da aventura">
+            <p>Ao desistir e dar as costas... O MONSTRO BLUEZÃO TE ATACA!</p>
+            <!-- Jumpscare Bluezão -->
+            <div id="jumpscare" class="hidden">
+                <img src="img/monstro-bluezao.png" alt="O Monstro Bluezão">
+                <audio id="jumpscare-sound" src="audio/susto.mp3"></audio>
+            </div>
+        </div>
+        <div class="passo" id="passo-5">
+            <p>Você explora o mercado da vila e encontra um velho sábio que conhece histórias sobre o Bluezão.</p>
+            <button class="btn-proximo" data-proximo="9">Ouvir as histórias do sábio</button>
+            <button class="btn-proximo" data-proximo="10">Voltar para a casa abandonada</button>
+        </div>
+        <div class="passo" id="passo-6">
+            <p>Na floresta próxima, você encontra pistas de que algo estranho está acontecendo por lá.</p>
+            <button class="btn-proximo" data-proximo="11">Investigar as pistas</button>
+            <button class="btn-proximo" data-proximo="12">Retornar à vila</button>
+        </div>
+        <div class="passo" id="passo-7">
+            <p>O Bluezão revela que ele está apenas procurando comida e não quer causar mal.</p>
+            <button class="btn-proximo" data-proximo="13">Oferecer ajuda ao Bluezão</button>
+            <button class="btn-proximo" data-proximo="14">Deixar o Bluezão e seguir em frente</button>
+        </div>
+        <div class="passo" id="passo-8">
+            <p>Você decide ignorar o Bluezão e continua explorando a casa abandonada.</p>
+            <button class="btn-proximo" data-proximo="15">Explorar o sótão</button>
+            <button class="btn-proximo" data-proximo="16">Explorar o porão</button>
+        </div>
+        <div class="passo" id="passo-9">
+            <p>O velho sábio conta que o Bluezão é um espírito protetor da vila e que ele só atacará quem tiver intenções ruins.</p>
+            <button class="btn-proximo" data-proximo="17">Ajudar a proteger a vila</button>
+            <button class="btn-proximo" data-proximo="18">Deixar a vila e buscar uma nova aventura</button>
+        </div>
+        <div class="passo" id="passo-10">
+            <p>Você volta à casa abandonada e encontra uma carta antiga revelando mais sobre o Bluezão.</p>
+            <button class="btn-proximo" data-proximo="19">Ler a carta</button>
+        </div>
+        <div class="passo" id="passo-11">
+            <p>Você segue as pistas e descobre que a floresta esconde um antigo templo.</p>
+            <button class="btn-proximo" data-proximo="20">Explorar o templo</button>
+            <button class="btn-proximo" data-proximo="21">Voltar para a vila</button>
+        </div>
+        <div class="passo" id="passo-12">
+            <p>Você retorna à vila e descansa, preparando-se para uma nova aventura.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-13">
+            <p>Você ajuda o Bluezão, e ele se torna seu amigo. Juntos, vocês exploram novos lugares e encontram tesouros escondidos.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-14">
+            <p>Você deixa o Bluezão e continua sua jornada, encontrando novas aventuras pela frente.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-15">
+            <p>Você explora o sótão e encontra uma pista que leva a um mistério antigo da casa.</p>
+            <button class="btn-proximo" data-proximo="22">Investigar o mistério</button>
+        </div>
+        <div class="passo" id="passo-16">
+            <p>Você explora o porão e encontra um antigo artefato que pode ter sido a causa dos rumores sobre a casa.</p>
+            <button class="btn-proximo" data-proximo="23">Analisar o artefato</button>
+        </div>
+        <div class="passo" id="passo-17">
+            <p>Você ajuda a proteger a vila com a ajuda do Bluezão, que se torna um herói local.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-18">
+            <p>Você decide deixar a vila e buscar novas aventuras, mas a lembrança do Bluezão sempre estará com você.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-19">
+            <p>A carta revela que a casa abandonada era um esconderijo de um antigo tesouro, mas apenas aqueles com um coração puro podem encontrá-lo.</p>
+            <button class="btn-proximo" data-proximo="24">Procurar o tesouro</button>
+        </div>
+        <div class="passo" id="passo-20">
+            <p>O templo na floresta é cheio de enigmas e desafios. Você encontra pistas sobre o passado da vila e novos segredos.</p>
+            <button class="btn-proximo" data-proximo="25">Resolver os enigmas</button>
+        </div>
+        <div class="passo" id="passo-21">
+            <p>Você volta para a vila e descobre que algo mudou enquanto você estava fora. Há novos desafios à frente.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-22">
+            <p>Investigar o mistério do sótão revela uma história sobre um antigo guardião da vila e sua conexão com o Bluezão.</p>
+            <button class="btn-proximo" data-proximo="26">Seguir a história do guardião</button>
+        </div>
+        <div class="passo" id="passo-23">
+            <p>Analisar o artefato revela que ele é uma chave para um segredo escondido na casa abandonada.</p>
+            <button class="btn-proximo" data-proximo="27">Usar a chave para encontrar o segredo</button>
+        </div>
+        <div class="passo" id="passo-24">
+            <p>Você encontra o tesouro e descobre que ele pertence a um antigo morador da vila. Sua coragem e bondade foram recompensadas.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-25">
+            <p>Resolver os enigmas do templo revela uma conexão com o Bluezão e um antigo segredo da vila.</p>
+            <button class="btn-proximo" data-proximo="28">Descobrir o segredo</button>
+        </div>
+        <div class="passo" id="passo-26">
+            <p>Seguir a história do guardião leva você a uma nova aventura, descobrindo mais sobre a proteção mágica da vila.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-27">
+            <p>Usar a chave revela um compartimento secreto com informações valiosas sobre a história da casa e o Bluezão.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+        <div class="passo" id="passo-28">
+            <p>Descobrir o segredo do templo revela a verdade sobre o Bluezão e sua missão para proteger a vila de forças malignas.</p>
+            <button class="btn-proximo" data-proximo="0">Começar de novo</button>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
