@@ -17,6 +17,7 @@ button {
 
 .passo {
     display: none;
+
 }
 
 .passo.ativo {
@@ -34,4 +35,15 @@ img {
 .fundo{
     max-width: 500px;
 
+}
+
+.fade {
+    opacity: 0; 
+    transition: opacity 4s ease-out, filter 0.5s ease-out;
+    filter: brightness(0); 
+}
+
+.fade-in {
+    opacity: 1; 
+    filter: brightness(1); 
 }
